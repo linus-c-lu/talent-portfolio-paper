@@ -30,7 +30,6 @@
     line-height: 1.8;
   }
 
-  /* AI banner */
   .ai-banner {
     background: #fff8e1;
     border-bottom: 1px solid #ffe082;
@@ -46,7 +45,6 @@
     z-index: 100;
   }
 
-  /* Layout */
   .layout {
     display: flex;
     align-items: flex-start;
@@ -55,7 +53,6 @@
     padding: 0 24px;
   }
 
-  /* Left nav */
   .outline-nav {
     width: var(--nav-width);
     flex-shrink: 0;
@@ -79,7 +76,6 @@
   }
 
   .outline-nav ol { list-style: none; }
-
   .outline-nav li { margin-bottom: 1px; }
 
   .outline-nav a {
@@ -110,7 +106,6 @@
     margin: 12px 0;
   }
 
-  /* Article */
   article {
     flex: 1;
     max-width: var(--content-max);
@@ -141,7 +136,6 @@
     margin-bottom: 28px;
   }
 
-  /* Abstract */
   .abstract-box {
     background: var(--light);
     border: 1px solid var(--border);
@@ -166,7 +160,6 @@
     color: #333;
   }
 
-  /* Sections */
   h2 {
     font-family: 'Noto Sans', sans-serif;
     font-size: 15px;
@@ -176,11 +169,19 @@
     border-bottom: 1px solid var(--border);
   }
 
+  h3 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--muted);
+    margin: 28px 0 10px;
+    letter-spacing: 0.01em;
+  }
+
   .sec-num { color: var(--accent); margin-right: 6px; }
 
   p { margin-bottom: 1em; }
 
-  /* Math */
   .math-block {
     background: var(--light);
     border: 1px solid var(--border);
@@ -200,7 +201,6 @@
     margin-bottom: 6px;
   }
 
-  /* Callout */
   .callout {
     background: var(--accent-light);
     border-left: 3px solid var(--accent);
@@ -211,7 +211,65 @@
     color: #1a3a6e;
   }
 
-  /* AI disclosure */
+  .aside-note {
+    background: #f3f3f3;
+    border-left: 3px solid #bdbdbd;
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-size: 13.5px;
+    color: #444;
+    font-style: italic;
+  }
+
+  .aside-note strong {
+    font-style: normal;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* Typology table */
+  .typology-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12.5px;
+    margin: 20px 0;
+  }
+
+  .typology-table th {
+    background: var(--light);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 500;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .typology-table td {
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    vertical-align: top;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .typology-table tr:nth-child(even) td { background: #fafafa; }
+
+  .typology-table .archetype {
+    font-weight: 500;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
   .ai-disclosure {
     background: #fff8e1;
     border: 1px solid #ffe082;
@@ -231,7 +289,6 @@
     margin-bottom: 5px;
   }
 
-  /* References */
   .references {
     margin-top: 44px;
     padding-top: 20px;
@@ -256,7 +313,6 @@
 
   .references li { margin-bottom: 5px; }
 
-  /* Go deeper */
   .go-deeper {
     margin: 44px 0 0;
     padding: 20px 24px;
@@ -313,6 +369,7 @@
   @media (max-width: 768px) {
     .outline-nav { display: none; }
     .layout { padding: 0 16px; }
+    .typology-table { font-size: 11.5px; }
   }
 </style>
 </head>
@@ -332,13 +389,14 @@
     </ol>
     <div class="nav-divider"></div>
     <ol>
-      <li><a href="#s1"><span class="num">1.</span>The Basic Analogy</a></li>
-      <li><a href="#s2"><span class="num">2.</span>Illiquidity, Opacity &amp; Incentives</a></li>
-      <li><a href="#s3"><span class="num">3.</span>Efficient Frontier &amp; Stage-Dependence</a></li>
+      <li><a href="#s1"><span class="num">1.</span>The Basic Analogy &amp; Scope</a></li>
+      <li><a href="#s2"><span class="num">2.</span>Frontier, Sharpe Ratio &amp; Beta</a></li>
+      <li><a href="#s3"><span class="num">3.</span>Illiquidity, Opacity &amp; Political Economy</a></li>
       <li><a href="#s4"><span class="num">4.</span>The Central Departure: Endogeneity</a></li>
       <li><a href="#s5"><span class="num">5.</span>The Endogenous Team</a></li>
-      <li><a href="#s6"><span class="num">6.</span>The Actual Optimization Problem</a></li>
-      <li><a href="#s7"><span class="num">7.</span>What This Changes</a></li>
+      <li><a href="#s6"><span class="num">6.</span>Complementarity vs. Diversification</a></li>
+      <li><a href="#s7"><span class="num">7.</span>The Full Optimization Problem</a></li>
+      <li><a href="#s8"><span class="num">8.</span>What the Framework Clarifies</a></li>
     </ol>
     <div class="nav-divider"></div>
     <ol>
@@ -354,94 +412,219 @@
 
     <div class="abstract-box" id="abstract">
       <div class="label">Abstract</div>
-      <p>Modern Portfolio Theory holds that the risk of an investment portfolio cannot be understood by looking at assets in isolation — what matters is how they move relative to each other. The same logic applies to teams. Most hiring optimizes for individual expected output while ignoring the covariance structure: how candidates interact with, amplify, or dampen the people already there. The key departure from MPT: unlike financial assets, people are endogenous to each other. They change the covariance matrix by being in it.</p>
+      <p>Modern Portfolio Theory offers a well-developed vocabulary for thinking about how assets combine to produce risk-adjusted returns. This paper asks how far that vocabulary can be pushed when the assets are people. The exercise is not primarily normative and does not claim to advance novel empirical findings; the organizational sociology literature has long established that team performance is interactional rather than additive, that complementarity matters, that early hires shape long-run trajectory, and that hiring systems optimize for legibility rather than value. The genuine contribution is narrower: translating MPT's formal structure into the talent context surfaces neglected variables, forces tradeoffs into explicit view, and occasionally generates non-obvious implications — particularly around the beta concept, the tension between interaction premiums and diversification, and the Sharpe ratio's systematic breakdown in illiquid talent markets. The failures of the analogy are as instructive as its successes. The most fundamental departure is that people are endogenous to one another — they alter the covariance matrix by virtue of being in it — and that the covariance matrix is not merely time-varying but partially a governance artifact, which means management quality may dominate composition quality in ways the framework cannot fully model.</p>
     </div>
 
     <section id="s1">
-      <h2><span class="sec-num">1.</span>The Basic Analogy</h2>
-      <p>Modern Portfolio Theory, developed by Markowitz (1952), made a simple but radical claim: investors shouldn't evaluate assets in isolation. What matters is how an asset behaves relative to everything else in the portfolio. The unit of analysis isn't the stock — it's the combination.</p>
-      <p>Expected team output is the straightforward part:</p>
+      <h2><span class="sec-num">1.</span>The Basic Analogy — and Its Scope</h2>
+
+      <p>Modern Portfolio Theory, developed by Markowitz (1952), advanced a claim simple in form and far-reaching in implication: investors should not evaluate assets in isolation. What matters is how an asset behaves relative to everything else in the portfolio. A volatile asset that moves inversely to the rest reduces total portfolio risk. The relevant unit of analysis is the combination, not the constituent.</p>
+
+      <p>The analogy to team composition is intuitive and, as this paper will argue, genuinely useful — but its scope needs to be stated before it is extended. The framework is most applicable to medium-to-large knowledge organizations where output is collaborative, roles are interdependent, and neither pure superstar dominance nor pure process substitution fully applies. In frontier talent markets where one exceptional person can contribute non-linearly more than the next best alternative, Rosen's (1981) superstar logic tends to override portfolio thinking: the covariance question becomes secondary to the question of whether you can acquire singular talent at all. In highly modular organizations where roles are substitutable and process dominates, the interaction terms developed below matter less because architectural modularization is precisely a mechanism for compressing them. The framework lives in the space between those two poles.</p>
+
+      <p>Within that scope, expected team output follows the intuitive part of MPT:</p>
+
       <div class="math-block">
         <p class="math-label">Expected output</p>
         \[ E(T) = \sum_i w_i E(o_i) \]
       </div>
-      <p>Each person \(i\) contributes expected output \(E(o_i)\), weighted by role allocation \(w_i\). This is how most hiring implicitly works — find the best person for each slot, add them up. It captures the easy part and ignores the harder part entirely.</p>
-      <p>Team variance is where MPT's real insight lands:</p>
+
+      <p>Each member \(i\) contributes expected output \(E(o_i)\), weighted by role allocation \(w_i\). This is how most hiring implicitly works: identify the best candidate for each position and aggregate. It captures what is measurable and ignores what is not.</p>
+
+      <p>Team variance is where MPT's insight begins to do real work:</p>
+
       <div class="math-block">
         <p class="math-label">Team variance</p>
         \[ \sigma_T^2 = \sum_i \sum_j w_i w_j \sigma_{ij} \]
       </div>
-      <p>Portfolio variance isn't a weighted average of individual variances — it depends on every pairwise covariance \(\sigma_{ij}\). Two engineers who think identically, share the same blindspots, and crack under the same conditions have correlation \(\rho \approx 1\): high portfolio variance, fragile under stress. Complementary failure modes reduce \(\sigma_T^2\) without necessarily sacrificing \(E(T)\). A team where different people come alive in different crises is structurally more resilient than one that looks uniformly strong on paper.</p>
+
+      <p>Portfolio variance is not a weighted average of individual variances; it depends on every pairwise covariance \(\sigma_{ij}\). Two engineers who share the same mental models, the same blindspots, and the same failure modes under pressure exhibit correlation \(\rho \approx 1\): high portfolio variance, fragile under stress. Complementary failure modes reduce \(\sigma_T^2\) without necessarily reducing \(E(T)\). A team whose members come alive in different types of crises is structurally more resilient than one that appears uniformly strong in routine conditions, even if the latter scores higher on any individual-level evaluation.</p>
+
+      <p>Before extending the analogy, it is worth acknowledging where the market microstructure breaks. MPT derives its tractability from deep, liquid, informationally thick financial markets: prices adjust continuously, historical covariances are estimable from large datasets, and arbitrage forces portfolios toward the efficient frontier. Talent markets are illiquid, informationally opaque, and relationship-mediated. This paper is therefore normative rather than predictive — a map of what organizations should be optimizing for, not a description of where they end up — and the vocabulary it borrows from finance should be treated as a lens rather than a model.</p>
     </section>
 
     <section id="s2">
-      <h2><span class="sec-num">2.</span>Illiquidity, Opacity, and Institutional Incentives</h2>
-      <p>The talent market's structure doesn't just complicate the analogy — it pushes hiring toward systematically overweighting the wrong variables.</p>
-      <p><em>Illiquidity</em> raises the cost of bad hires asymmetrically. A bad hire isn't a position you can unwind at market price. A risk-adjusted quality heuristic should therefore include an exit-cost penalty:</p>
+      <h2><span class="sec-num">2.</span>The Efficient Frontier, the Sharpe Ratio, and Beta</h2>
+
+      <h3>2.1 A Typology of Organizational Archetypes</h3>
+
+      <p>Before applying MPT's core concepts, it is worth distinguishing three organizational archetypes, because the appropriate translation of each concept differs substantially across them.</p>
+
+      <table class="typology-table">
+        <thead>
+          <tr>
+            <th>Archetype</th>
+            <th>Primary objective</th>
+            <th>Examples</th>
+            <th>MPT fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="archetype">Execution</td>
+            <td>Scale a known model reliably; minimize output variance</td>
+            <td>Airlines, hospital systems, enterprise software</td>
+            <td>Strong — variance minimization is the right objective</td>
+          </tr>
+          <tr>
+            <td class="archetype">Innovation</td>
+            <td>Search under uncertainty; accept variance in exchange for upside</td>
+            <td>Research labs, early-stage product teams, studios</td>
+            <td>Partial — exploration logic (March 1991) dominates; high variance is a feature</td>
+          </tr>
+          <tr>
+            <td class="archetype">Tournament</td>
+            <td>Maximize exposure to convex upside; winner-take-most</td>
+            <td>VC-backed startups, trading firms, special ops, elite campaigns</td>
+            <td>Weak — Rosen superstar logic overrides portfolio thinking; diversification is the wrong objective</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Bell Labs in its productive decades illustrates the innovation archetype taken to an institutional extreme: an organization explicitly designed to accept high individual variance and low correlation between research directions, in exchange for breakthroughs that could not have been forecast in advance. The same staffing model applied to an execution organization would be harmful in both directions. The subsequent sections primarily address execution and innovation organizations, where the portfolio analogy has most purchase.</p>
+
+      <h3>2.2 The Efficient Frontier</h3>
+
+      <p>The efficient frontier in MPT is the set of portfolios that maximize expected return for a given level of variance. Teams have a conceptual analog: for any target performance level, there exists in principle a minimum-variance composition that achieves it. The problem is that most teams are assembled by sequential local optimization — a role opens, the best available candidate is hired, the process repeats — without reference to the covariance structure already in place. This is the portfolio equivalent of building a position one security at a time without consulting the full correlation matrix, under conditions where the matrix is only partially observable even when explicitly sought.</p>
+
+      <p>The location of the efficient frontier also shifts across organizational archetypes. Execution organizations should be moving left — accepting lower expected upside in exchange for variance reduction. Innovation organizations should be moving right — accepting higher variance in exchange for greater expected upside. The error most organizations make is not choosing the wrong direction but failing to recognize when the objective function changed and continuing to hire for the old one.</p>
+
+      <h3>2.3 The Sharpe Ratio and Its Limits in Hiring</h3>
+
+      <p>The Sharpe ratio supplies the canonical risk-adjusted return heuristic in finance: excess return divided by standard deviation, collapsing the tradeoff between performance and volatility into a single comparable number. Translated to hiring, the instinct is defensible. Evaluating a candidate on expected output alone, without accounting for the variance being absorbed, produces the same error as selecting a security on its mean return. A Sharpe-structured hire quality heuristic would take the form:</p>
+
       <div class="math-block">
-        <p class="math-label">Hire quality heuristic</p>
+        <p class="math-label">Hire quality heuristic (Sharpe-structured)</p>
         \[ \text{Hire quality} = \frac{E(o_i) - \text{cost}_i}{\sigma_i + \lambda_i} \]
       </div>
-      <p>Where \(\lambda_i\) reflects how costly it is to unwind the position if it goes wrong. Roles that are harder to exit — senior leadership, deeply integrated architects, anyone who becomes a coordination hub — carry higher \(\lambda_i\) and require proportionally higher expected output to justify the hire. Most organizations evaluate senior and junior candidates on roughly the same expected-output logic, when the illiquidity profile is radically different.</p>
-      <p><em>Informational opacity</em> creates adverse selection. Talent markets have thin information: a resume, a few interviews, references systematically biased toward the positive. This isn't just noise. It's a structural asymmetry firms can't easily correct. Greenwald (1986) extended Akerlof's lemons framework directly to labor, showing that incumbent firms selectively retain their best people — the available pool is adversely selected by definition.</p>
+
+      <p>where \(\lambda_i\) is a liquidity premium reflecting the cost of exiting the position if the hire goes wrong. Roles that are difficult to unwind — senior leadership, deeply integrated technical architects, coordination hubs whose departure would disrupt multiple teams — carry higher \(\lambda_i\) and require proportionally higher expected output to justify the same quality rating. Most organizations evaluate senior and junior candidates on roughly equivalent expected-output logic, despite their illiquidity profiles being radically different.</p>
+
+      <p>The Sharpe analogy breaks down in at least two respects. First, financial assets do not resist liquidation. A position one wishes to exit can be unwound in seconds; the only friction is the bid-ask spread. A bad hire involves severance negotiation, legal exposure, team disruption, and a lag between diagnosis and resolution during which damage compounds. The effective \(\lambda_i\) is almost always larger than ex-ante estimates suggest, and the underestimation is not random: optimism about a hire correlates with the seniority of the role, which is precisely where exit costs are highest.</p>
+
+      <p>Second, the Sharpe ratio assumes independence across positions. In a well-diversified financial portfolio, high individual variance is tolerable because much of it cancels in aggregate. In a small team it does not. A high-variance senior hire whose variance is correlated with the team's most critical operational dependencies amplifies total team variance without the diversification offset. A Sharpe-structured heuristic applied at the level of the individual position is therefore insufficient; what is needed is a version that accounts for the candidate's covariance contribution to total team variance — which is precisely the quantity that is hardest to estimate before a hire is made.</p>
+
+      <h3>2.4 Beta and the Environmental Sensitivity of Output</h3>
+
+      <p>Beta is perhaps the most underused concept when MPT is applied to teams:</p>
+
       <div class="math-block">
-        <p class="math-label">Information-conditioned expectation</p>
-        \[ E(o_i) \rightarrow E(o_i \mid \mathcal{I}_j) \]
+        <p class="math-label">Beta — environmental sensitivity of output</p>
+        \[ \beta_i = \frac{\text{Cov}(o_i, T)}{\sigma_T^2} \]
       </div>
-      <p>Where \(\mathcal{I}_j\) is the information set of firm \(j\). The efficient frontier isn't just hard to reach — the firm can't locate it.</p>
-      <p><em>Institutional incentives</em> compound the opacity problem. Hiring managers are rewarded not for maximizing expected team value but for avoiding blame. A credentialed candidate who underperforms is defensible. An unconventional bet that fails is not. No individual decision-maker chose this equilibrium; it emerges from institutional reward structures that don't separate hiring quality from hiring defensibility.</p>
-      <div class="callout">
-        Illiquidity and opacity together create a hold-up problem. Once a hire is integrated — relationships forming, knowledge embedded — exit costs rise sharply. The most complementary contributors become paradoxically the hardest to exit even when they become misaligned. Their organizational value and their hold-up potential grow together.
+
+      <p>In finance, beta measures an asset's sensitivity to market-wide movements. In the team context, it measures the <em>environmental sensitivity of output</em> — how tightly a person's contribution is conditioned on the state of the team around them. A high-beta contributor performs well when the team is functioning well and degrades when conditions deteriorate; their output amplifies whatever the team is already doing. A low-beta contributor exhibits relative stability regardless of team health.</p>
+
+      <p>The classification likely conflates several psychologically distinct traits — ambiguity tolerance, social dependence, role specialization, institutional competence — and should not be read as a clean behavioral taxonomy. Its value is structural rather than psychological: it identifies a dimension of hire evaluation that most processes ignore entirely. Neither type dominates unconditionally. A team composed entirely of low-beta contributors may be individually resilient but collectively incoherent; a team composed entirely of high-beta contributors is fragile to organizational shock.</p>
+
+      <p>Beta has a temporal dimension that interacts with organizational stage. Low-beta contributors who produce stably amid ambiguity are disproportionately valuable in early-stage environments. As the organization matures and conditions stabilize, high-beta contributors who flourish in well-structured environments become more valuable. It is worth noting, however, that early-stage teams also depend heavily on people who synchronize collective action, build alignment, and sustain morale under uncertainty — functions that are arguably high-beta. The stage-dependence argument is directional rather than clean.</p>
+
+      <div class="aside-note">
+        <strong>A note on risk type</strong>
+        MPT treats variance as the primary risk object, but for most teams the more consequential failure mode is correlated collapse — everyone failing simultaneously, or key-person dependency creating single points of failure. These are tail risk problems, not variance problems, and the appropriate analytic framework sits closer to extreme value theory than to mean-variance optimization. MPT's vocabulary does not address them directly, which is itself a limit worth acknowledging.
       </div>
     </section>
 
     <section id="s3">
-      <h2><span class="sec-num">3.</span>The Efficient Frontier and Stage-Dependence</h2>
-      <p>March (1991) established the canonical framing: organizations face a fundamental tension between exploiting known capabilities and exploring new ones. In portfolio terms, an early-stage company is solving a search problem under radical uncertainty — it needs to explore many directions, accept high outcome variance, and preserve optionality. Optimizing for low \(\sigma_T^2\) in that context trades away the variance that might contain the breakthrough. As the organization shifts to scaling a known model, output variance becomes costly rather than informative.</p>
-      <p>Bell Labs in its peak decades illustrates the exploration logic taken to an institutional extreme: an organization explicitly designed to accept high individual variance and low correlation between research directions, in exchange for breakthroughs that couldn't be predicted in advance. The same staffing model applied to a firm scaling a repeatable process would be actively harmful.</p>
-      <p>The MPT frame also has scope limits at the role level. For positions where output distributions are heavily right-skewed — Rosen (1981) showed that small differences in ability generate convex differences in output in markets where talent is imperfectly substitutable — minimizing variance is actively wrong. For these roles, the right model is closer to venture portfolio construction: concentrate in high-variance bets and accept that most won't pay off.</p>
+      <h2><span class="sec-num">3.</span>Illiquidity, Opacity, and the Political Economy of Hiring</h2>
+
+      <p>The structural properties of talent markets do not merely complicate the MPT application; they explain why hiring processes are systematically biased toward the wrong variables. But the explanation runs deeper than information failure. Many organizations are not, in practice, optimizing team performance and failing due to opacity. They are optimizing something else — career safety, institutional legitimacy, credential reproduction — and informational constraints function partly as cover for that substitution. This is a harder and more uncomfortable claim than the standard adverse selection story, and the framework cannot fully resolve it.</p>
+
+      <p><em>Illiquidity</em> raises the cost of bad hires asymmetrically. Severance costs, legal exposure, team disruption, and the period of degraded performance between recognizing the problem and resolving it all impose costs that accumulate over time. This feeds directly into the \(\lambda_i\) term in the hire quality heuristic above. The practical implication is that organizations should require a larger expected output premium for roles with higher exit costs — a logic most evaluation processes do not apply, and that institutional incentives actively discourage.</p>
+
+      <p><em>Informational opacity</em> creates adverse selection. Greenwald (1986) extended Akerlof's lemons framework to labor, showing that incumbent employers selectively retain high performers, which means the external pool is adversely selected by construction. The consequence for the model is a conditioned expected output term:</p>
+
+      <div class="math-block">
+        <p class="math-label">Information-conditioned expectation</p>
+        \[ E(o_i) \rightarrow E(o_i \mid \mathcal{I}_j) \]
+      </div>
+
+      <p>where \(\mathcal{I}_j\) is the information set of firm \(j\). The efficient frontier is not merely difficult to reach; the firm cannot locate it. It is optimizing over a distribution it cannot fully observe.</p>
+
+      <p><em>Institutional incentives</em> are where the argument becomes most uncomfortable. Hiring managers are agents with their own reward structures, and those structures systematically reward defensibility over performance. A credentialed candidate who underperforms is defensible; an unconventional bet that fails is not. No individual decision-maker chose this equilibrium — it emerges from institutional structures that conflate hiring quality with hiring legibility — but the result is that organizations do not consistently try to maximize team performance and fall short. They try to maximize something else and succeed. That distinction matters for diagnosis: the corrective is not better information but altered incentives, and altered incentives require political will that the framework itself cannot supply.</p>
+
+      <div class="callout">
+        Illiquidity and opacity together generate a hold-up problem. Once a hire has become embedded — relationships formed, knowledge accumulated, processes organized around that person's presence — exit costs rise sharply. The most complementary contributors become paradoxically the most difficult to exit when they become misaligned. Their organizational value and their leverage accumulate together.
+      </div>
     </section>
 
     <section id="s4">
       <h2><span class="sec-num">4.</span>The Central Departure: Endogeneity</h2>
-      <p>The analogy breaks in one enormously important way: financial assets don't affect each other. People do. In MPT, \(\sigma_{ij}\) is a stable statistical property of two assets' return histories — something you can estimate from data and treat as fixed. On a team, \(\sigma_{ij}\) is a property of a relationship, and relationships are causally active. The covariance matrix isn't an input to the optimization — it's endogenous to the composition decision itself.</p>
-      <p>This single departure cascades into several consequences. The covariance matrix is <em>time-varying</em>: trust compounds, communication patterns stabilize, and \(\sigma_{ij}\) evolves as people work together. It's <em>path-dependent</em>: who you hire changes the relational structure into which subsequent hires arrive. And its effects are <em>asymmetric</em>: one person can shift the entire matrix, because a culture-carrier who models productive disagreement affects relationships they're not directly party to.</p>
-      <p>Several other features of teams fall outside MPT's vocabulary. Weights aren't continuous — you can hold 4.3% of a stock, but you can't hire 0.4 of a person. You can't short people — the analog to a negative position is a non-hire or termination, neither frictionless nor reversible. And teams are governance systems as much as production functions: status hierarchies, authority ambiguities, and incentive misalignments shape output in ways that have no covariance analog.</p>
-      <p>None of this kills the analogy. But it does make the optimization problem far messier than portfolio construction.</p>
+
+      <p>The analogy fails in one respect that proves generative rather than merely limiting. Financial assets do not affect one another. People do. In MPT, \(\sigma_{ij}\) is a stable statistical property of two assets' return histories — estimable from data and treatable as fixed in the optimization. On a team, \(\sigma_{ij}\) is a property of a relationship, and relationships are causally active.</p>
+
+      <p>The implications are more destructive to the analogy than the endogeneity point alone suggests. In financial markets, covariance is mostly descriptive; assets do not respond strategically to the portfolio they are placed in. On teams, people adapt — incentives alter behavior, leadership changes correlations, norms change correlations, compensation changes correlations, and learning changes individual output distributions themselves. The covariance matrix is not merely time-varying; it is partially a governance artifact. This means management quality may dominate composition quality, and organizational architecture may dominate talent architecture. Many covariance problems are actually incentive problems in disguise, and the MPT frame risks encouraging over-composition-thinking at the expense of the organizational and managerial levers that move the matrix more directly.</p>
+
+      <p>The endogeneity also means the matrix is path-dependent: each hire alters the relational structure into which subsequent hires arrive. And its effects are asymmetric: a single culture-carrier who models productive disagreement shifts relationships that person is not directly party to. The matrix is not simply changed by each composition decision; it is changed in ways that cannot be fully undone by subsequent ones.</p>
+
+      <p>Several other properties of teams fall outside MPT's vocabulary entirely. Portfolio weights are continuous; team weights are not — one cannot hold 0.4 of a person. There is no analog to a short position. And teams are governance systems as much as production functions: status hierarchies, authority ambiguities, and incentive misalignments shape output in ways that have no covariance equivalent.</p>
     </section>
+
+    <section id="s5">
       <h2><span class="sec-num">5.</span>The Endogenous Team</h2>
-      <p>Because the covariance matrix is endogenous, the model requires an interaction term that MPT doesn't have:</p>
+
+      <p>Because the covariance matrix is endogenous, the output model requires an interaction term that MPT does not contain:</p>
+
       <div class="math-block">
         <p class="math-label">Endogenous team output</p>
         \[ E(T) = \sum_i w_i E(o_i) + \sum_{i \neq j} \alpha_{ij} \cdot f(\text{compatibility}_{ij}) \]
       </div>
-      <p>Where \(\alpha_{ij}\) captures the output premium from the relationship between \(i\) and \(j\). This term absorbs communication quality, trust, cognitive complementarity, and role clarity. In high-trust teams, \(\alpha_{ij} > 0\) broadly. A corrosive hire drives \(\alpha_{ij} < 0\) across multiple relationships simultaneously, and because the damage propagates through the network rather than staying local, it compounds in ways that aren't visible until attrition makes them obvious.</p>
-      <p>Neffke (2019) measured co-worker complementarity across industries, finding that complementarity is high in knowledge-intensive occupations — healthcare, engineering, law — and low in substitutable work. Amazon's modularization culture is partly an architectural choice to compress the variance contribution of \(\alpha_{ij}\) rather than optimize it. Process is organizational diversification: a structural substitute for the interaction premiums high-trust teams generate through relationship quality.</p>
+
+      <p>where \(\alpha_{ij}\) — read as "alpha sub i-j" — captures the output premium generated by the relationship between members \(i\) and \(j\). This term absorbs communication quality, trust, cognitive complementarity, and role clarity. In high-trust teams, \(\alpha_{ij} > 0\) broadly. A corrosive hire drives \(\alpha_{ij} < 0\) across multiple relationships simultaneously, and because the damage propagates through the network rather than remaining local, it compounds before attrition makes it legible.</p>
+
+      <p>Leadership is a critical omission in the standard formulation of this term. Great leaders do not merely occupy a node in the network; they actively govern the covariance structure — manufacturing positive interaction effects, compressing variance, maintaining psychological safety, and aligning incentives in ways that shift \(\alpha_{ij}\) across the entire team. In practice, a strong leader can partially substitute for sub-optimal composition, which suggests the matrix is more governable than a purely compositional view implies. Neffke (2019) measured co-worker complementarity across industries and found that complementarity effects are largest in knowledge-intensive occupations — healthcare, engineering, law — and substantially smaller in substitutable work, consistent with the typology developed in Section 2.</p>
     </section>
 
     <section id="s6">
-      <h2><span class="sec-num">6.</span>The Actual Optimization Problem</h2>
-      <p>Once the endogeneity of \(\alpha_{ij}\) is taken seriously alongside the market structure constraints from Section 2, the optimization problem becomes:</p>
+      <h2><span class="sec-num">6.</span>A Tension: Complementarity Against Diversification</h2>
+
+      <p>The interaction premium \(\alpha_{ij}\) and the diversification benefit from low \(\sigma_{ij}\) are not independent. They are, in many practical cases, in tension — and this tension is one of the more original observations the MPT vocabulary surfaces.</p>
+
+      <p>MPT's diversification logic holds that variance-minimizing portfolios are built from assets with low or negative pairwise correlation. Applied to teams, this recommends compositional diversity: members with different cognitive profiles, different stress responses, and different failure modes, so that the events that impair one person do not impair others simultaneously.</p>
+
+      <p>The problem is that the conditions that generate high \(\alpha_{ij}\) — strong interaction premiums — tend to require a degree of similarity that works against low \(\sigma_{ij}\). Shared technical vocabulary, compatible working styles, and cultural alignment reduce the coordination overhead of a relationship. Two people who think in similar frameworks can communicate with low friction; their ideas combine quickly because the translation cost is small. These are the conditions under which \(\alpha_{ij}\) is large and positive. They are also conditions under which \(\sigma_{ij}\) tends to be elevated — similar people respond similarly to the same organizational stresses.</p>
+
+      <p>This claim should not be overstated. Fleming (2001) on recombinant search and Neffke (2019) both suggest the premium is highest not at identical overlap but at adjacent overlap: enough shared framework to communicate fluently, enough difference to cover distinct blindspots. Many elite organizations deliberately engineer shared values alongside differentiated cognition — the goal is mutual intelligibility with heterogeneous failure modes. Pure cognitive clones generate low \(\sigma_{ij}\) but also low \(\alpha_{ij}\), because there is no knowledge transfer and no complementarity of perspective.</p>
+
+      <p>Even granting that nuance, the tension is real. The compositional choice that minimizes \(\sigma_T^2\) — maximum diversity, low pairwise correlation — is not the same as the choice that maximizes \(\sum \alpha_{ij}\). The appropriate weighting between these objectives maps onto the organizational typology from Section 2. Execution organizations should weight low \(\sigma_T^2\) more heavily and accept the coordination overhead of cognitive diversity. Innovation organizations should weight \(\sum \alpha_{ij}\) more heavily and accept the correlation risk that comes with cultural and technical proximity. Tournament organizations may need to ignore both in favor of acquiring singular capability regardless of compositional consequences.</p>
+
+      <div class="callout">
+        This maps directly onto the exploration-exploitation distinction from March (1991). The efficient frontier for a team is not fixed; it shifts as a function of what the organization is trying to produce. The tradeoff between \(\alpha_{ij}\) and \(\sigma_{ij}\) is one of the mechanisms by which that shift operates.
+      </div>
+    </section>
+
+    <section id="s7">
+      <h2><span class="sec-num">7.</span>The Full Optimization Problem</h2>
+
+      <p>Once the endogeneity of \(\alpha_{ij}\) is taken seriously alongside the market structure constraints developed in Section 3, the optimization problem becomes:</p>
+
       <div class="math-block">
         <p class="math-label">Full optimization</p>
         \[ \max_{w} \left[ \sum_i w_i E(o_i \mid \mathcal{I}_j) + \sum_{i \neq j} \alpha_{ij}(w) \right] \quad \text{subject to} \quad \sigma_T^2 \leq \bar{\sigma} \]
       </div>
-      <p>The problem is no longer convex — interaction premiums shift every time you add someone — and the objective is only partially observable. The marginal value of a new hire is:</p>
+
+      <p>The problem is no longer convex — interaction premiums shift each time composition changes — and the objective is only partially observable. The marginal value of a new hire is:</p>
+
       <div class="math-block">
         <p class="math-label">Marginal hire value</p>
         \[ \Delta E(T) = w_i E(o_i \mid \mathcal{I}_j) + \sum_{j \neq i} \Delta\alpha_{ij} \]
       </div>
-      <p>In highly interdependent environments, the second term can dominate — and it's estimated under dramatically worse information. A technically average hire who substantially improves coordination across three key relationships may create more value than a high-output hire who degrades two.</p>
-      <p>Path-dependence compounds this. Early hires shape the relational structure into which later hires arrive, so founding composition has disproportionate influence on the team's eventual capability ceiling. Combined with the hold-up dynamic from Section 2 — exit costs growing with integration — errors in early composition are both the most consequential and the hardest to correct.</p>
+
+      <p>In highly interdependent environments, the second term can dominate, and it is estimated under substantially worse information than the first. A technically average hire who improves coordination across three critical relationships may generate more value than a high-output hire who degrades two. Bonhomme (2021) develops econometric machinery for identifying precisely these interaction effects from team output data, finding them substantial in knowledge-intensive settings.</p>
+
+      <p>Path-dependence amplifies the stakes at the margin. Early hires shape the relational structure into which later hires arrive, so founding composition exercises disproportionate influence on the team's eventual capability ceiling. Combined with the hold-up dynamic from Section 3 — exit costs growing monotonically with integration — errors in early composition are simultaneously the most consequential and the hardest to correct.</p>
     </section>
 
-    <section id="s7">
-      <h2><span class="sec-num">7.</span>What This Changes</h2>
-      <p>Most hiring asks: <em>How good is this person?</em> MPT suggests a second question: <em>What is their correlation with the rest of the team?</em> The endogenous team model adds a third: <em>What does adding this person do to \(\sum \alpha_{ij}\)?</em> And the market structure analysis adds a fourth that reframes all three: <em>Which of these questions are we actually equipped to answer — and where, as a result, are our errors concentrated?</em></p>
-      <p>Organizations optimize individual output because individual output is legible. Interaction effects drive much of actual team performance, but they're latent, slow-moving, and hard to attribute. Every structural feature of the market pushes in the same direction.</p>
-      <p>Management matters enormously too. The point isn't that composition dominates everything else; it's that organizations systematically underweight it.</p>
-      <p>The equilibrium persists because the corrective mechanisms are weak: performance attribution is noisy, causal links emerge slowly, hiring managers optimize locally, unconventional bets create asymmetric career risk. No individual actor has to behave irrationally for the system to produce systematically mediocre teams.</p>
-      <p>That's what makes the equilibrium stable. Not that it's optimal.</p>
+    <section id="s8">
+      <h2><span class="sec-num">8.</span>What the Framework Clarifies — and What It Cannot Reach</h2>
+
+      <p>Most hiring asks: <em>How good is this person?</em> MPT adds a second question: <em>What is their correlation with the rest of the team?</em> The endogenous team model adds a third: <em>What does adding this person do to \(\sum \alpha_{ij}\)?</em> The beta framework adds a fourth: <em>Is this person's environmental sensitivity of output calibrated to the current organizational stage?</em> And the market structure analysis imposes a fifth that reframes all of the above: <em>Which of these questions is the organization actually equipped to answer — and are its errors concentrated in information failure, or in the prior question of what it is actually trying to optimize?</em></p>
+
+      <p>The framework has several genuine blind spots worth naming explicitly. It is allocative rather than developmental: it treats talent as selected rather than created, and ignores the degree to which elite organizations build capability through training, mentorship, internal labor markets, and institutional memory. It has little to say about the moral and motivational dimensions of organizational performance — the ways mission alignment, trust, identity, and legitimacy produce effort levels that dominate compositional optimization, particularly in military units, professional partnerships, and high-conviction startups. And it cannot model the conditions under which the MPT frame is actively misleading: cases where optimizing composition is a distraction from the clarity of priorities, quality of incentives, or caliber of management that actually determines whether a given covariance structure generates value.</p>
+
+      <p>What it does do is make explicit several quantities that hiring practice systematically ignores. Covariance is real and consequential. Interaction premiums are real and measurable in principle. The tension between complementarity and diversification is real and resolves differently across organizational types. Beta — or more precisely, the environmental sensitivity of output — is a coherent and neglected dimension of hire evaluation. None of these require the full MPT apparatus to be useful; the apparatus is a scaffold for making them thinkable, not a model firms should literally solve.</p>
+
+      <p>Organizations optimize individual output because individual output is legible. Interaction effects drive much of realized team performance but are latent, slow-moving, and resistant to attribution. The equilibrium persists not because any individual actor is irrational but because every corrective mechanism — performance attribution, review cycles, career incentives — is calibrated to what is observable, and the most consequential variables are not. That is what makes the equilibrium stable. Not that it is optimal.</p>
     </section>
 
     <div class="ai-disclosure">
@@ -465,6 +648,7 @@
         <li>Akerlof, G. A. (1970). The market for lemons. <em>Quarterly Journal of Economics</em>, 84(3), 488–500.</li>
         <li>Bonhomme, S. (2021). Teams: Heterogeneity, sorting, and complementarity. BFI Working Paper 2021-15.</li>
         <li>Burt, R. S. (1992). <em>Structural Holes</em>. Harvard University Press.</li>
+        <li>Fleming, L. (2001). Recombinant uncertainty in technological search. <em>Management Science</em>, 47(1), 117–132.</li>
         <li>Greenwald, B. C. (1986). Adverse selection in the labour market. <em>Review of Economic Studies</em>, 53(3), 325–347.</li>
         <li>March, J. G. (1991). Exploration and exploitation in organizational learning. <em>Organization Science</em>, 2(1), 71–87.</li>
         <li>Markowitz, H. (1952). Portfolio selection. <em>Journal of Finance</em>, 7(1), 77–91.</li>
@@ -482,8 +666,6 @@
   const sections = document.querySelectorAll('section[id], .abstract-box[id], .references[id]');
   const navLinks = document.querySelectorAll('.outline-nav a');
 
-  // Intercept all nav clicks — use scrollIntoView instead of href
-  // so the sandboxed iframe doesn't try to navigate to a new page
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -495,7 +677,6 @@
     });
   });
 
-  // Active state on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
